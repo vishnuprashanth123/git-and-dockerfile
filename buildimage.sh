@@ -10,4 +10,4 @@ echo "build docker image to ECR"
 sed -i s#198095598917.dkr.ecr.ap-south-1.amazonaws.com/ecrrepo:8#198095598917.dkr.ecr.ap-south-1.amazonaws.com/ecrrepo:$version#g taskdef.json
 aws ecs register-task-definition --CLI-input-json file://taskdef.json --region ap-south-1
 
-echo "new task created "
+echo "new task created and service "
